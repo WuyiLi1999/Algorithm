@@ -1,6 +1,6 @@
 package com.five;
 
-import java.util.HashMap;
+
 import java.util.HashSet;
 
 /**BM53:缺失的第一个正整数
@@ -16,7 +16,7 @@ public class BM53 {
         for (int i = 0; i < nums.length; i++) {
             hashSet.add(nums[i]);
         }
-        //设置第一个正整数为1，循环遍历判断集合中是否包含该元素:包含就将当前值加一，否则的话返回当前值
+        //设置第一个正整数为1，循环遍历判断集合中是否包含该元素:包含就将当前值加一，否则的话返回当前值为足额是的第一个整数
         int  result=1;
         while (hashSet.contains(result)){
             result++;

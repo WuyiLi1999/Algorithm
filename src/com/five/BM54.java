@@ -13,7 +13,7 @@ public class BM54 {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
         //1.定义存放最后的结果集
         ArrayList<ArrayList<Integer>> lists=new ArrayList<>();
-        //保存三个数的值，用来判断是否符合题意left+middle+right=0；并且三元组中的值是按顺序递增的
+        //保存三个数的值，用来判断是否符合题意left+middle+right=0；并且三元组中的值是按顺序递增的 保证有序
         int left,middle,right;
         //2.排序
         Arrays.sort(num);
