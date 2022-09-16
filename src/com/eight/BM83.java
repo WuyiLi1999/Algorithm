@@ -16,7 +16,6 @@ public class BM83 {
             else
                 stringBuilder.append(s.charAt(i));
         }
-
         s=stringBuilder.toString();
         StringBuilder s1=new StringBuilder(n);
         if (s.endsWith(" "))
