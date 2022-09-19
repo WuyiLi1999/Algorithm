@@ -6,6 +6,7 @@ package com.eight;
  * 要求：时间复杂度 O(n)
  */
 public class BM86 {
+
     public String solve (String s, String t) {
         // write code here
         if (s.length()==0)
