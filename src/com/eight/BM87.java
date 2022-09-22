@@ -13,7 +13,7 @@ public class BM87 {
         int right=str.length()-1;
         //循环遍历字符串，结束条件为
         while (left<=right){
-            //判断左右指针对应的元素是否相等，不相等返回false
+            //判断左右指针对应的元素是否相等，不相等返回false否则判断下一个
             if (str.charAt(left)!=str.charAt(right))
                 return false;
             left++;
