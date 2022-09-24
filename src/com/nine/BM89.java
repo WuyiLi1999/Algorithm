@@ -10,10 +10,10 @@ class Interval {
     Interval() { start = 0; end = 0; }
     Interval(int s, int e) { start = s; end = e; }
 }
-/**BM89:合并两个区间
+/**BM89:合并两个区间--算法思想：排序+贪心算法
  * 给出一组区间，请合并所有重叠的区间。保证合并后的区间按区间起点升序排列。
- * 时间复杂度O(nlogn)，空间复杂度O(n)
  */
+
 public class BM89 {
     //时间复杂度O(nlogn)，空间复杂度O(n)
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
