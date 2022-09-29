@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 给出一组可能包含重复项的数字，返回该组数字的所有排列。结果以字典序升序排列。
  */
 public class BM59 {
-    //递归+回溯————
+    //递归+回溯--时间和空间复杂度O(n!)
     public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
         Arrays.sort(num);
         ArrayList<ArrayList<Integer>> lists=new ArrayList<>();
