@@ -7,7 +7,7 @@ import java.util.Arrays;
  *输入一个长度为 n 字符串，打印出该字符串中字符的所有排列，你可以以任意顺序返回这个字符串数组。
  */
 public class BM61 {
-    //递归+回溯--时间和空间复杂度O(n!)
+    //递归+回溯--时间、空间复杂度O(n!)
     public ArrayList<String> Permutation(String str) {
         ArrayList<String> list=new ArrayList<>();
         if (str.length()==0)
