@@ -7,6 +7,7 @@ package com.eight;
 public class BM83 {
     public String trans(String s, int n) {
         // write code here
+        //1. 进行大小写转换
         StringBuilder stringBuilder=new StringBuilder(n);
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i)>='a'&&s.charAt(i)<='z')
@@ -16,16 +17,19 @@ public class BM83 {
             else
                 stringBuilder.append(s.charAt(i));
         }
-        s=stringBuilder.toString();
-        StringBuilder s1=new StringBuilder(n);
-        if (s.endsWith(" "))
-            s1.append(" ");
-
-        String [] ss=s.split(" ");
-        for (int i =ss.length-1 ; i >0 ; i--) {
-            s1.append(ss[i]+" ");
+        //2. 进行字符串反转
+        stringBuilder=stringBuilder.reverse();
+        //3. 将每一个翻转后的单词再翻转一次
+        for (int i = 0; i < stringBuilder.length(); i++) {
+            int j=i;
+            //以空格为界将字符串中的单词反转
+            while (j<n&&stringBuilder.charAt(j)!=' ')
+                j++;
+            String temp=stringBuilder.substring(i,j);
+            temp=new StringBuilder(temp).reverse().toString();
+            stringBuilder.replace(i,j,temp);
+            i=j;
         }
-        s1.append(ss[0]);
-        return s1.toString();
+        return stringBuilder.toString();
     }
 }

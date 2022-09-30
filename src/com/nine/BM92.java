@@ -8,23 +8,16 @@ import java.util.HashMap;
 public class BM92 {
     public int maxLength (int[] arr) {
         // write code here
+        if (arr.length==0)
+            return 0;
         HashMap<Integer,Integer> hashMap=new HashMap<>();
-        int left=0,right=1;
-        int length=1;
-        hashMap.put(arr[0],0);
+        int left=0,right=0;
+        int length=0;
         for (; right < arr.length; right++) {
-            if (hashMap.containsKey(arr[right])){
-                int j=left;
-                for (; j < hashMap.get(arr[right]); j++) {
-                    hashMap.remove(arr[j]);
-                }
-                left=j+1;
-            }
+            if (hashMap.containsKey(arr[right]))
+                left=Math.max(left,hashMap.get(arr[right])+1);
             hashMap.put(arr[right],right);
-            length=Math.max(right-left+1,length);
-        }
-        for (int i = left; i < right; i++) {
-            System.out.println(arr[i]);
+            length=Math.max(length,right-left+1);
         }
         return length;
     }
