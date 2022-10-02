@@ -1,9 +1,11 @@
 package com.seven;
 
 /**BM66：最长公共子串
- *
+ *给定两个字符串str1和str2,输出两个字符串的最长公共子串
+ * 题目保证str1和str2的最长公共子串存在且唯一。
  */
 public class BM66 {
+    //时间复杂度O(n^2)，空间复杂度O(n^2)
     public String LCS (String str1, String str2) {
         // write code here
         //
