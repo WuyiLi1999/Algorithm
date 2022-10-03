@@ -8,7 +8,6 @@ public class BM66 {
     //时间复杂度O(n^2)，空间复杂度O(n^2)
     public String LCS (String str1, String str2) {
         // write code here
-        //
         int [][] dp=new int[str1.length()+1][str2.length()+1];
         //记录最长公共子串的最后索引位置
         int maxLengthLastIndex=0;
@@ -30,6 +29,7 @@ public class BM66 {
 
             }
         }
+        //返回截取的子串
         return str1.substring(maxLengthLastIndex-maxLength+1,maxLengthLastIndex+1);
     }
 
