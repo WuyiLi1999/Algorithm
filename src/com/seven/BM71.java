@@ -16,6 +16,7 @@ public class BM71 {
         //遍历dp数组，计算dp[i]的值
         for (int i = 1; i < dp.length; i++) {
             //循环遍历dp[i]之前的位置，如果当前arr[i]元素小于arr[j]将j位置对应的dp[j]值+1,与dp[i]位置相比较，保存最大值
+            //转移方程:dp[i]=Math.max(dp[i],dp[j]+1)
             for (int j = 0; j < i; j++) {
                 if (arr[j]<arr[i])
                     dp[i]=Math.max(dp[i],dp[j]+1);
