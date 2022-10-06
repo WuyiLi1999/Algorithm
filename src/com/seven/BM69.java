@@ -1,5 +1,9 @@
 package com.seven;
 
+/**BM69：将数字翻译成字符串
+ * 有一种将字母编码成数字的方式：'a'->1, 'b->2', ... , 'z->26'。
+ * 现在给一串数字，返回有多少种可能的译码结果
+ */
 public class BM69 {
     //动态规划：时间复杂度O(n) 空间复杂度O(n)
     public int solve (String nums) {

@@ -1,6 +1,6 @@
 package com.seven;
 
-public class BM82 {
+public class BM72 {
     //动态规划：时间复杂度O(n)，空间复杂度O(n)
     public int FindGreatestSumOfSubArray(int[] array) {
         //dp[i]用来保存以i结尾的子数组的最大和，dp[0]=array[0]
