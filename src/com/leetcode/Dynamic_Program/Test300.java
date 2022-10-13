@@ -6,10 +6,11 @@ import java.util.Arrays;
  *
  */
 public class Test300 {
+    //时间复杂度O(n^2) 空间复杂度O(n)
     public int lengthOfLIS(int[] nums) {
         // write code here
         int n= nums.length;
-        //dp[i]表示第i个位置中的最长递增子序列，初始值为1,（当前自己）
+        //dp[i]表示以第i个位置为结尾的的最长递增子序列，初始值为1,（当前自己）
         int [] dp=new int[n];
         Arrays.fill(dp,1);
         int max=1;//用来保存最长自增子序列中的最大值
