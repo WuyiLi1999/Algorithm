@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class Test17 {
     public final String letters[]={
+            " ",//0
+            "",//1
             "abc",//2
             "def",//3
             "ghi",//4
@@ -18,7 +20,9 @@ public class Test17 {
             "wxyz"//9
 
     };
+    //
     List<String> list=new ArrayList<>();
+    //递归+回溯(需要使用之前的结果回到之前的状态)：时间复杂度O(2^n)，空间复杂度O(n)--递归的层数
     public List<String> letterCombinations(String digits) {
         if (digits.length()==0||digits==null)
             return list;
@@ -34,8 +38,8 @@ public class Test17 {
             return;
         }
         char c=digits.charAt(index);
-        for (int i = 0; i < letters[c-'2'].length(); i++) {
-            findCombinations(digits,index+1,s+letters[c-'2'].charAt(i));
+        for (int i = 0; i < letters[c-'0'].length(); i++) {
+            findCombinations(digits,index+1,s+letters[c-'0'].charAt(i));
         }
     }
 
