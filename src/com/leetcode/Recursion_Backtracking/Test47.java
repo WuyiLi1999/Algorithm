@@ -9,7 +9,7 @@ import java.util.List;
  *给出一组可能包含重复项的数字，返回该组数字的所有排列。结果以字典序升序排列。
  */
 public class Test47 {
-
+    //排列问题：时间复杂度O(n*n!)，空间复杂度O(nlogn)--排序所消耗的时间
     public List<List<Integer>> permuteUnique(int[] nums) {
         //用来保存结果集
         List<List<Integer>> lists=new ArrayList<>();
