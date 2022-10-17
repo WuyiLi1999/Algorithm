@@ -10,6 +10,7 @@ import java.util.List;
  * 每个数字 最多使用一次
  */
 public class Test216 {
+    //递归+回溯：时间复杂度O(9^k)
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> lists=new ArrayList<>();
         List<Integer> list=new ArrayList<>();
