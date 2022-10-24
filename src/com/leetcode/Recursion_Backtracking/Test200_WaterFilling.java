@@ -16,13 +16,14 @@ public class Test200_WaterFilling {
                 //当前节点值为'1'并且该节点没有和之前的岛屿连接在一起作为一个大的岛屿
                 if (grid[i][j]=='1'&&!flag[i][j]){
                     number++;
-                    dfs(grid,i,j);
+                    dfs(grid,i,j);//对于grid[i][j]相连的岛屿合并到该岛屿中
                 }
             }
         }
         return number;
     }
     //深度优先遍历递归结束条件（回溯）--当查找当前节点的上下左右都没有与之相连的1，就结束，
+    //保证（x，y）合法并且grid[x][y]是没有被访问过的陆地
     private void dfs(char[][] grid, int x, int y) {
         //该岛屿已经被记录了
         flag[x][y]=true;
