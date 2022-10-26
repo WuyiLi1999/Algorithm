@@ -1,7 +1,7 @@
 package com.leetcode.BinaryTree_Recursion;
 
 //112：判断二叉树是否存在一个从根节点到叶子节点的路径，使得了路径和为指定的target
-public class Test112_BinaryTreePathSum {
+public class Test112_PathSum_One {
     public boolean hasPathSum(TreeNode root, int targetSum){
         //初始阶段：初始节点为null，一定不存在返回false
         if (root==null)

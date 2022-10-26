@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //113:寻找从根节点到叶子节点和为target的路径
-public class Test113_PathSum {
+public class Test113_PathSum_Two {
     List<List<Integer>> lists=new ArrayList<>();//保存所有的路径
     List<Integer> list=new ArrayList<>();//保存从根节点到叶子节点和为target的一条路径
 
