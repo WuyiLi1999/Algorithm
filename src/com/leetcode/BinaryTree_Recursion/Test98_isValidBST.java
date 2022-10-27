@@ -2,6 +2,7 @@ package com.leetcode.BinaryTree_Recursion;
 
 import java.util.Stack;
 
+//98:判断一棵树是否为二叉搜索树(BST)
 public class Test98_isValidBST {
     //方法一：递归判断
     // 根据二叉搜索树的性质BST：左子树一定小于根节点，右子树一定大于根节点
