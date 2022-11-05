@@ -1,6 +1,6 @@
 package com.leetcode.LinkedList;
 
-//203:移除链表中指定值的元素
+//203:移除链表中指定值的元素(虚拟头结点)
 public class Test203_removeElements {
     public ListNode removeElements(ListNode head, int val) {
         if(head==null)
@@ -9,6 +9,7 @@ public class Test203_removeElements {
         preHead.next=head;
         ListNode curNode=preHead;
         while (curNode.next!=null){
+            //找到节点值等于指定值的的节点--删除
             if (curNode.next.val==val) {
                 ListNode delNode = curNode.next;
                 curNode.next = delNode.next;
