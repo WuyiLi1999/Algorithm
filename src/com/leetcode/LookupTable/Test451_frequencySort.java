@@ -6,6 +6,7 @@ import java.util.*;
 //给定一个字符串 s ，根据字符出现的 频率 对其进行 降序排序 。一个字符出现的 频率 是它出现在字符串中的次数。
 public class Test451_frequencySort {
     //使用HashMap+优先队列--HashMap来保存字符出现的频率，优先队列进行排序（小根堆）
+    //时间复杂度O(nlogn) 空间复杂度O(n)
     public String frequencySort(String s) {
         //1、计算字符串中每一个字符出现的频率
         HashMap<Character,Integer> hashMap=new HashMap<>();
