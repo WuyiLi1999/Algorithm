@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//15:三数之和等于0
 public class Test15_threeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> lists=new ArrayList<>();
