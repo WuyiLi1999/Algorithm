@@ -9,8 +9,6 @@ import java.util.Map;
  * 0 <= i, j, k, l < n
  * nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
  */
-
-
 public class Test454_fourSumCount {
     //时间复杂度O(n^2) 空间复杂度O(n^2)
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
