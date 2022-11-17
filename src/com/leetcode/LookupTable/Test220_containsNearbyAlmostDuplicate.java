@@ -11,6 +11,7 @@ public class Test220_containsNearbyAlmostDuplicate {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
         TreeSet<Long> treeSet=new TreeSet<>();
         for (int i=0;i<nums.length;i++){
+            //大于等于 x−t 的元素中的最小元素是否小于等于 x+t 即可
             Long number=treeSet.ceiling((long) nums[i]-(long)valueDiff);
             if(number!=null&&number<=(long)nums[i]+(long)valueDiff){
                 return true;
