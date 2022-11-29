@@ -17,7 +17,7 @@ public class Test167_twoSum {
                 left++;
             }
         }
-        return null;
+        return new int[]{-1,-1};
     }
 
     public static void main(String[] args) {
