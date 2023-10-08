@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-//349:两个数组的交集--保证输出结果唯一，存在重复元素只输出一个  查找表之set
+/**
+ * 349:两个数组的交集--保证输出结果唯一，存在重复元素只输出一个  查找表之set
+ */
 public class Test349_intersection {
     //时间复杂度O(n)，空间复杂度O(n)
     public int[] intersection(int[] nums1, int[] nums2) {
