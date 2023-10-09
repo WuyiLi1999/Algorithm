@@ -1,6 +1,8 @@
 package com.leetcode.LookupTable;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 //219:存在重复元素——滑动窗口
 public class Test219_containsNearbyDuplicate {
@@ -15,10 +17,23 @@ public class Test219_containsNearbyDuplicate {
             }
             //判断新的元素是否在滑动窗口中，在证明在哈希集合中则在同一个滑动窗口中有重复元素返回true，
             // 否则将当前元素添加进滑动窗口中，作为滑动窗口最后一个位置的元素
-            if (hashSet.contains(nums[i]))
+            if (hashSet.contains(nums[i])) {
                 return true;
-            else
+            } else {
                 hashSet.add(nums[i]);
+            }
+        }
+        return false;
+    }
+    //哈希表
+    public boolean containsNearbyDuplicate_1(int[] nums, int k) {
+        HashMap<Integer,Integer> hashMap=new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.containsKey(nums[i])&&(i-hashMap.get(nums[i]))<=k){
+                return true;
+            }else {
+                hashMap.put(nums[i],i);
+            }
         }
         return false;
     }
