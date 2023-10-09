@@ -10,11 +10,8 @@ public class Test451_frequencySort {
     public String frequencySort(String s) {
         //1、计算字符串中每一个字符出现的频率
         HashMap<Character,Integer> hashMap=new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            if (hashMap.containsKey(s.charAt(i)))
-                hashMap.put(s.charAt(i),hashMap.get(s.charAt(i))+1);
-            else
-                hashMap.put(s.charAt(i),1);
+        for (int i = 0; i < s.length();i++){
+            hashMap.put(s.charAt(i),hashMap.getOrDefault(s.charAt(i),0)+1);
         }
         //2、将HashMap中的元素添加到优先队列中进行排序（小根堆）
         PriorityQueue<Freq> priorityQueue=new PriorityQueue<>();
@@ -31,6 +28,7 @@ public class Test451_frequencySort {
         }
         return new String(newStr);
     }
+
     class Freq implements Comparable<Freq>{
         private char c;
         private int freq;
@@ -41,12 +39,13 @@ public class Test451_frequencySort {
 
         @Override
         public int compareTo(Freq o) {
-            if (this.freq>o.freq)
+            if (this.freq>o.freq) {
                 return 1;
-            else if (this.freq<o.freq)
+            } else if (this.freq<o.freq) {
                 return -1;
-            else
+            } else {
                 return 0;
+            }
         }
     }
 
