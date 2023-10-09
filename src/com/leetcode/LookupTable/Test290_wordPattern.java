@@ -13,7 +13,8 @@ public class Test290_wordPattern {
             return false;
         }
         for (Integer i = 0; i < words.length; i++) {
-            //Map中的put函数:如果键值已存在更新value值并返回之前的value值，如果键值不存在插入成功并返回null,根据put函数返回的结果来判断，如果一致--匹配
+            //Map中的put函数:如果键值已存在更新value值并返回之前的value值，如果键值不存在插入成功并返回null,
+            // 根据put函数返回的结果来判断，如果一致--匹配
             if (map.put(pattern.charAt(i),i)!=map.put(words[i],i)){
                 return false;
             }
