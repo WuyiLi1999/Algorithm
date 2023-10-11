@@ -25,19 +25,17 @@ public class Test83_deleteDuplicates {
         return head;
     }
 
-    public ListNode deleteDuplicates_1(ListNode head) {
+    public ListNode deleteDuplicates_1(ListNode head){
         if (head==null){
             return null;
         }
         ListNode curNode=head;
         while (curNode!=null&&curNode.next!=null){
-            int val=curNode.val;
-            if (curNode.next.val==val){
+            if (curNode.val==curNode.next.val){
                 curNode.next=curNode.next.next;
             }else {
                 curNode=curNode.next;
             }
-
         }
         return head;
     }
